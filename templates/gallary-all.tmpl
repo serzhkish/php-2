@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4.2</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrp-img">
+    {% for item in lsImg %}
+      <a class="imgs-a" href="2-ok-1.php?n={{ item }}"><img class="imgs" src="img/small/{{ item }}" alt="Картинка {{ item }}" width="150" height="100"></a>
+    {% endfor %}
+  </div>
+  <form enctype="multipart/form-data" action="2-ok-all.php" method="POST">  
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+    <input type="file" class="pic" name="pic" accept=".jpg, .jpeg, .png" />
+    <input type="submit" name="sbt" value="Отправить" />
+  </form>
+</body>
+</html>

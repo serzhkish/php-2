@@ -1,0 +1,51 @@
+.wrp-img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 480px;
+  margin: 0 auto;
+}
+
+.wrp-img-1{
+  width: 480px;
+  margin: 0 auto;
+}
+
+.imgs {
+  margin: 5px;
+}
+
+.imgs-1{
+  display: block;
+}
+
+.imgs:hover {
+  outline: 2px solid rgb(71, 28, 226);
+  filter: brightness(0.7);
+}
+
+.pic::-webkit-file-upload-button {
+  display: none;
+}
+.pic::before {
+  content: "Выберите файл:";
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin: 0 5px 0 0;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.pic:hover::before {
+  border-color: black;
+}
+.pic:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
