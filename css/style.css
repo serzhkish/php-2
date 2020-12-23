@@ -1,0 +1,37 @@
+.wrp {
+  width: 660px;
+  min-height: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.wrp-prd {
+  width: 120px;
+  min-height: 200px;
+}
+
+.prd-title, 
+.prd-price {
+  text-align: center;
+  margin: 5px;
+}
+
+.prd-img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.prd-buy {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.load-more {
+  width: 200px;
+  display: block;
+  margin: 5px auto;
+}
