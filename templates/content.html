@@ -1,0 +1,13 @@
+<main>
+  <div class="wrp">
+    {% for good in goods %}
+      <div class="wrp-prd">
+        <p class="prd-title">{{ good.title }}</p>
+        <img src="img/{{ good.img }}" alt="{{ good.title }}" class="prd-img" width="100" height="110">
+        <p class="prd-price">Price: {{ good.price }} $</p>
+        <button class="prd-buy" data-id="{{ good.id }}">Купить</button>
+      </div>
+    {% endfor %}
+  </div>
+  <button class="load-more">Загрузить еще...</button>
+</main>
