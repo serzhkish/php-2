@@ -1,7 +1,7 @@
 <?php
   define('DB_Drive', 'mysql');
   define('DB_Host', 'localhost');
-  define('DB_Name', 'shop');
+  define('DB_Name', 'mvc');
   define('DB_User', 'root');
   define('DB_Pass', 'root');
 
