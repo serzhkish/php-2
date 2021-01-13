@@ -1,0 +1,20 @@
+<main class="main">
+	<div class="left">
+	</div>
+	<div class="center">
+		{% for good in goods %}
+			<div class="good-wrp">
+				<span class="good-title">{{ good.name }}</span>
+				<span class="good-price">Цена: {{ good.price }}</span>
+				{% if isLogin %}
+					<button class="good-btn" data-id="{{ good.id_good }}"><span class="good-btn-txt">Купить</span></button>
+				{% else %}
+					<a href="index.php?act=login" class="auth">Авторизоваться</a>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+	<div class="right">
+	</div>
+</main>
+
