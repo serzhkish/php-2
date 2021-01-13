@@ -1,0 +1,16 @@
+<main class="main">
+	<div class="left">
+	</div>
+	<div class="center">
+		{% for good in goods %}
+			<div class="good-wrp">
+				<span class="good-title">{{ good.name }}</span>
+				<span class="good-price">Цена: {{ good.price }}</span>
+				<button class="good-cart-btn" data-id="{{ good.id_basket }}"><span class="good-btn-txt">Удалить</span></button>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="right">
+	</div>
+</main>
+

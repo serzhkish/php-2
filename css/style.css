@@ -1,37 +1,155 @@
-.wrp {
-  width: 660px;
-  min-height: 100px;
-  margin: 0 auto;
+.header {
+  width: 100%;
+  min-height: 150px;
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  margin: 5px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* border: 1px solid; */
+}
+
+.menu li {
+  align-content: center;
+  margin: 5px;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-item:hover {
+  color: blue;
+}
+
+.main {
+  display: flex;
+  background-color: cornflowerblue;
+}
+
+.left,
+.right {
+  width: 10%;
+  /* border: 1px solid; */
+  min-height: 500px;
+}
+
+.center {
+  width: 80%;
+  /* border: 1px solid green; */
+  background-color: darkgray;
+  min-height: 500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.wrp-prd {
-  width: 120px;
-  min-height: 200px;
+.reg-center,
+.profile-center {
+  width: 80%;
+  /* border: 1px solid green; */
+  background-color: darkgray;
+  min-height: 500px;
 }
 
-.prd-title, 
-.prd-price {
+.good-wrp {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.good-title {
+  display: block;
   text-align: center;
+  font-size: 20px;
+  color: blue;
+  margin: 0 0 10px 0;
+}
+
+.good-img {
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+.good-price {
+  margin: 0 0 10px 0;
+}
+
+.good-btn,
+.auth,
+.sbt-button {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3eff8e;
+  color: #000;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+}
+
+.good-btn:hover,
+.auth:hover,
+.sbt-button:hover {
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.auth {
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.good-btn-txt {
+  /* margin: 15px; */
+  font-weight: 700;
+}
+
+.formVal {
   margin: 5px;
 }
-
-.prd-img {
-  width: 100px;
-  display: block;
-  margin: 0 auto;
+.review-frm,
+.admin-frm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 20px 0 20px;
 }
 
-.prd-buy {
-  width: 100px;
-  display: block;
-  margin: 0 auto;
+.review-txt,
+.admin-desc {
+  resize: none;
 }
 
-.load-more {
-  width: 200px;
-  display: block;
-  margin: 5px auto;
+.review-wrp {
+  width: 100%;
+  margin: 20px;
+}
+
+.review-show-author {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.review-show-date {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.review-show-txt {
+  font-size: 16px;
+}
+
+.reg-form {
+  margin: 10px;
 }

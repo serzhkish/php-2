@@ -1,37 +1,53 @@
 <?php
-  require_once 'vendor/autoload.php';
-  require_once 'modules/config.php';
+  require_once 'lib/autoload.php';
 
-  try{
-    $loader = new Twig_Loader_Filesystem('templates');
-    $twig = new Twig_Environment($loader);
-    
-    $header = $twig->render('header.html', array(
-      'titlePage' => 'Shop'
-    ));
+  session_start();
 
-    $result = $db->query('SELECT * FROM products ORDER BY id ASC Limit 5');
+  DBPDO::getInstance()->Connect();
+
+  // site.ru/index.php?act=catalog&c=user
+  // site.ru/index.php?act=admin&c=user
+  // site.ru/index.php?act=login&c=user
+  // site.ru/index.php?act=reg&c=user
+  // site.ru/index.php?act=profile&c=user
+
+  $action = 'action_';
+  $action .=(isset($_GET['act'])) ? $_GET['act'] : 'catalog';
   
-    if ($db->errorCode() != 0000){
-      $error_array = $db->errorInfo();
-      echo "SQL error: ".$error_array[2].'<br />';
-    }
-    $resultOutput = [];
-    while ($row = $result->fetch()){
-      array_push($resultOutput, $row);
-    }
-
-    $content = $twig->render('content.html', array(
-      'goods' => $resultOutput
-    ));
-
-    $footer = $twig->render('footer.html', array(
-      'titlePage' => 'Shop',
-      'name' => 'Fabien'
-    ));
-
-    echo $header.$content.$footer;
-  } catch(Exception $e) {
-    die("Error: ".$e->getMessage());
+  if (isset($_POST['login']) && (isset($_POST['pwd']))) {
+    $action = 'action_login';
+    $_GET['c'] = '';
   }
-  
+
+  if (isset($_POST['loginReg'])) {
+    $action = 'action_reg';
+    $_GET['c'] = '';
+  }
+
+  if (isset($_POST['titleAdd'])) {
+    $action = 'action_admin';
+    $_GET['c'] = '';
+  }
+
+  if (isset($_POST['idGoods'])) {
+    $action = 'action_addCart';
+    $_GET['c'] = 'ajax';
+  }
+
+  if (isset($_POST['idBasket'])) {
+    $action = 'action_removeCart';
+    $_GET['c'] = 'ajax';
+  }
+
+	switch ($_GET['c'])	{
+		case 'user':
+			$controller = new C_User();
+      break;
+    case 'ajax':
+      $controller = new C_Ajax();
+      break;
+		default:
+      $controller = new C_Page();
+	}
+
+	$controller->Request($action);

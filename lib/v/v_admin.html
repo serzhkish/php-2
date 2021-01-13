@@ -1,0 +1,19 @@
+<main class="main">
+  <div class="left">
+  </div>
+  <div class="center">
+    <form action="index.php" method="post" enctype="multipart/form-data" class="admin-frm">
+      <input type="text" name="titleAdd" class="formVal" placeholder="Название">
+      <input type="text" name="priceAdd" class="formVal" placeholder="Цена">
+      <select name="categoryAdd" class="formVal">
+        <option value="">-- Выберите категорию --</option>
+        <option value="1">Телефоны</option>
+        <option value="2">Ноутбуки</option>
+      </select>
+      <input type="submit" value="Отправить" class="formVal">
+    </form>
+    <div>{{ errAdd }}</div>
+  </div>
+  <div class="right">
+  </div>
+</main>
