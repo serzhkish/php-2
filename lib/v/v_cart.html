@@ -1,0 +1,34 @@
+<main class="main">
+	<div class="left">
+	</div>
+	<div class="center center-cart">
+		<!--a href="index.php?act=order" class="good-cart-btn"><span class="good-btn-txt">Оформить</span></a-->
+		<form action="index.php" method="POST" class="frm-order">
+			<input type="text" class="good-order-addr" placeholder="адрес доставки" name="address">
+			<input type="text" class="good-order-phone" placeholder="номер телефона" name="phone">			
+			<input type="submit" class="good-order-btn" value="Оформить" name="order-sbt">
+		</form>
+		{% if errOrder %}
+			<p class="good-order-err">Заполните данные о доставке</p>
+		{% endif %}
+		{% for good in goods %}
+			<div class="good-cart-row" data-id="{{ good.id_basket }}">
+				<span class="good-title-cart">{{ good.name }}</span>
+				<span class="good-price-cart">Цена: {{ good.price }}</span>
+				<div class="good-cart-column">
+					<input class="good-count-cart" type="number" min="1" value="{{ good.s_count }}">
+				</div>
+				<form action="index.php" method="POST">
+					<div class="good-cart-column">
+						<input type="hidden" name="idBasket1" value="{{ good.id_basket }}">
+						<input type="submit" class="good-cart-btn" value="Удалить">
+						<!--button class="good-cart-btn" data-id="{{ good.id_basket }}"><span class="good-btn-txt">Удалить</span></button-->
+					</div>
+			</form>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="right">
+	</div>
+</main>
+

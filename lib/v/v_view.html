@@ -1,0 +1,17 @@
+<main class="main">
+  <div class="left">
+	</div>
+	<div class="center-view">
+    {% for good in goods %}
+      <img src="/img/{{ good.img_name }}" alt="Фото товара" height="300" weight="150" class="view-img">
+      <div class="view-wrp">
+          <p class="view-name">Название: {{ good.name }}</p>
+          <p class="view-price">Цена: {{ good.price }}</p>
+          <p>Можно добавить описание</p>
+          <button class="good-btn" data-id="{{ good.id_good }}"><span class="good-btn-txt">Купить</span></button>
+      </div>
+    {% endfor %}
+	</div>
+	<div class="right">
+	</div>
+</main>

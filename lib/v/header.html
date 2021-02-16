@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    {{ title }}
+  </title>
+  <meta content="text/html; charset=Windows-1251" http-equiv="content-type">
+  <link rel="stylesheet" href="css\normalize.css">
+  <link rel="stylesheet" href="css\style.css">
+</head>
+
+<body>
+  <div class="header">
+    <ul class="menu">
+      <li><a href="index.php" class="menu-item">Каталог</a></li>
+      {% if isAdmin %}
+        <li><a href="index.php?act=admin" class="menu-item">Админка</a></li>
+      {% endif %}
+      {% if isLogin %}
+        <!--li><a href="review.php" class="menu-item">Оставить отзыв о сайте</a></li-->
+        <li><a href="index.php?act=cart" class="menu-item menu-cart">Корзина (<span class="menu-item-count">{{ countGoods }}</span>)</a></li>
+        <li><a href="index.php?act=profile" class="menu-item">Профиль</a></li>
+        <li><a href="index.php?act=logout" class="menu-item">Выход ({{ login }})</a></li>
+      {% else %}
+        <li><a href="index.php?act=reg" class="menu-item">Регистрация</a></li>
+        <li><a href="index.php?act=login" class="menu-item">Вход</a></li>
+      {% endif %}
+    </ul>
+  </div>

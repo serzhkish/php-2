@@ -1,0 +1,19 @@
+<main class="main">
+  <div class="left">
+  </div>
+  <div class="reg-center">  
+    <form action="index.php" method="post" class="reg-form">
+      <p class="reg-name">Имя:</p>
+      <input type="text" name="nameReg" class="reg-name-in formVal">
+      <p class="reg-name">Логин:</p>
+      <input type="text" name="loginReg" class="reg-name-in formVal">
+      <p class="reg-pwd">Пароль:</p>
+      <input type="password" name="pwdReg" class="reg-pwd-in formVal">
+      <br>
+      <input type="submit" name="sbt" value="Регистрация" class="sbt-button formVal">
+    </form>
+    <div>{{ regFail }}</div>
+  </div>
+  <div class="right">
+  </div>
+</main>

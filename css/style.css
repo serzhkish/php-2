@@ -1,0 +1,269 @@
+.header {
+  width: 100%;
+  min-height: 150px;
+  background-color: #1A1E23;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  margin: 5px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+  /* background-color: green; */
+  /* border: 1px solid; */
+  align-items: center;
+  padding: 0;
+}
+
+.menu li {
+  align-content: center;
+  margin: 5px;
+}
+
+.menu-item {
+  text-decoration: none;
+  /* color: black; */
+  text-transform: uppercase;
+  background: linear-gradient(#198CE6) 0 100% left/0 no-repeat;
+  color: #198CE6;
+  /* background-clip: text; */
+  transition: 0.3s linear;
+}
+
+.menu-item:hover {
+  color: blue;
+}
+
+.menu-item:active {
+  color: darkblue;
+}
+
+.menu-item-count {
+  width: 20px;
+  /* background-color: green; */
+  display: inline-block;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  background-color: cornflowerblue;
+}
+
+.left,
+.right {
+  width: 10%;
+  /* border: 1px solid; */
+  min-height: 500px;
+}
+
+.center {
+  width: 80%;
+  /* border: 1px solid green; */
+  background-color: darkgray;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.center-cart {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.center-view {
+  width: 80%;
+  background-color: darkgray;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.view-img,
+.view-wrp {
+  margin: 30px;
+}
+
+.view-name,
+.view-price {
+  margin: 10px;
+  font-size: large;
+}
+
+.reg-center,
+.profile-center {
+  width: 80%;
+  /* border: 1px solid green; */
+  background-color: darkgray;
+  min-height: 500px;
+}
+
+.good-wrp {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;  
+}
+
+.good-href-view {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.good-cart-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.good-title {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: blue;
+  margin: 0 0 10px 0;
+}
+
+.good-title-cart {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: blue;
+  margin: 0 0 10px 0;
+  width: 25%;
+}
+
+.good-img {
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+.good-price {
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+.good-price-cart,
+.good-cart-column {
+  margin: 0 0 10px 0;
+  width: 25%;
+}
+
+.good-count-cart {
+  width: 40px;
+}
+
+.good-btn,
+.auth,
+.sbt-button,
+.good-cart-btn {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3eff8e;
+  color: #000;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+}
+
+.good-cart-btn {
+  margin: 10px;
+  text-decoration: none;
+}
+
+.good-btn:hover,
+.auth:hover,
+.sbt-button:hover,
+.good-cart-btn:hover {
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.frm-order {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.good-order-btn,
+.good-order-addr,
+.good-order-phone {
+  margin: 0 10px;
+}
+
+.good-order-btn {
+  align-items: center;
+  justify-content: center;
+  background-color: #3eff8e;
+  color: #000;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+}
+
+.good-order-btn:hover {
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.good-order-err {
+  color: red;
+  text-align: center;
+}
+
+.auth {
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.good-btn-txt {
+  /* margin: 15px; */
+  font-weight: 700;
+}
+
+.formVal {
+  margin: 5px;
+}
+
+.review-frm,
+.admin-frm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 20px 0 20px;
+}
+
+.review-txt,
+.admin-desc {
+  resize: none;
+}
+
+.review-wrp {
+  width: 100%;
+  margin: 20px;
+}
+
+.review-show-author {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.review-show-date {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.review-show-txt {
+  font-size: 16px;
+}
+
+.reg-form {
+  margin: 10px;
+}
