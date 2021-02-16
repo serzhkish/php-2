@@ -4,7 +4,10 @@
 	<div class="center">
 		{% for good in goods %}
 			<div class="good-wrp">
-				<span class="good-title">{{ good.name }}</span>
+				<a href="index.php?act=view&prod={{ good.id_good }}" class="good-href-view">
+					<img src="/img/{{ good.img_name }}" alt="Фото товара" height="100" weight="50">
+					<span class="good-title">{{ good.name }}</span>
+				</a>
 				<span class="good-price">Цена: {{ good.price }}</span>
 				{% if isLogin %}
 					<button class="good-btn" data-id="{{ good.id_good }}"><span class="good-btn-txt">Купить</span></button>

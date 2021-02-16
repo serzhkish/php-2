@@ -68,6 +68,14 @@
       }
     }
 
+    function getUserId() {
+      if ($_SESSION['id_user']) {
+        return $_SESSION['id_user'];
+      } else {
+        return null;
+      }
+    }
+
     function isLogin() {
       return $_SESSION['user_login'] ? true : false;
     }

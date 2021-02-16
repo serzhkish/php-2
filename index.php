@@ -39,6 +39,23 @@
     $_GET['c'] = 'ajax';
   }
 
+  if (isset($_POST['countGood'])) {
+    $action = 'action_changeCountGoodsInCart';
+    $_GET['c'] = 'ajax';
+  }
+
+  if (isset($_POST['idBasket1'])) {
+    $action = 'action_cart';
+    $_GET['c'] = '';
+  }
+
+  if (isset($_POST['order-sbt'])) {
+    $action = 'action_cart';
+    $_GET['c'] = '';
+  }
+
+  // print_r($_POST);
+
 	switch ($_GET['c'])	{
 		case 'user':
 			$controller = new C_User();

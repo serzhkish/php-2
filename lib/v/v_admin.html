@@ -10,7 +10,9 @@
         <option value="1">Телефоны</option>
         <option value="2">Ноутбуки</option>
       </select>
-      <input type="submit" value="Отправить" class="formVal">
+      <input type="hidden" name="MAX_FILE_SIZE" value="30000000" />
+      <input type="file" name="fileAdd" accept=".jpg, .jpeg, .png">
+      <input type="submit" value="Отправить" class="formVal sbt-button">
     </form>
     <div>{{ errAdd }}</div>
   </div>

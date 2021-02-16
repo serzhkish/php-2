@@ -32,4 +32,13 @@
         echo '1';
       }      
     }
+
+    public function action_changeCountGoodsInCart() {
+      if ($this->user->isLogin()) {
+        $this->ajaxM->changeCountGoodsInCart();
+        echo '0';
+      } else {
+        echo '1';
+      }      
+    }
   }

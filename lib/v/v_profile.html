@@ -6,7 +6,12 @@
       Здравствуйте, {{ userName }}!
       Это ваш профиль.
     </p>
-
+    {% if orders != 0 %}
+      <p>Номера ваших заказов:</p>
+      {% for order in orders %}
+        {{ order.id_order }} <br>
+      {% endfor %}
+    {% endif %}
   </div>
   <div class="right">
   </div>

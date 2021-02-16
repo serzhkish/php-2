@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 13 2021 г., 14:46
--- Версия сервера: 10.3.22-MariaDB
--- Версия PHP: 7.3.17
+-- Время создания: Янв 10 2021 г., 05:25
+-- Версия сервера: 5.6.47
+-- Версия PHP: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,14 +36,6 @@ CREATE TABLE `s_basket` (
   `is_order` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Дамп данных таблицы `s_basket`
---
-
-INSERT INTO `s_basket` (`id_basket`, `id_user`, `id_good`, `price`, `is_in_order`, `is_order`) VALUES
-(18, 6, 2, 500, 0, 0),
-(19, 6, 2, 500, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -70,15 +62,6 @@ CREATE TABLE `s_goods` (
   `id_category` int(11) NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Дамп данных таблицы `s_goods`
---
-
-INSERT INTO `s_goods` (`id_good`, `name`, `price`, `id_category`, `status`) VALUES
-(1, 'iphone', 1000, 1, 0),
-(2, 'msi', 2000, 2, 0),
-(3, 'samsung', 300, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -154,12 +137,7 @@ CREATE TABLE `s_user` (
 --
 
 INSERT INTO `s_user` (`id_user`, `user_name`, `user_login`, `user_password`, `user_last_action`) VALUES
-(1, 'Bugrov Sergey', 'bs', 'bs', '0000-00-00 00:00:00'),
-(2, '', 'ss', 'ss', '2021-01-11 06:16:28'),
-(3, '', '', '', '2021-01-11 07:00:50'),
-(4, '', 'sss', '', '2021-01-11 07:01:10'),
-(5, '', 'aa', 'aa', '2021-01-11 09:24:05'),
-(6, 'Алекс', 'qq', 'qq', '2021-01-11 09:25:35');
+(1, 'Bugrov Sergey', 'bs', 'bs', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -178,12 +156,7 @@ CREATE TABLE `s_user_role` (
 --
 
 INSERT INTO `s_user_role` (`id_user_role`, `id_user`, `id_role`) VALUES
-(1, 1, 1),
-(2, 2, 2),
-(3, 3, 2),
-(4, 4, 2),
-(5, 5, 2),
-(6, 6, 2);
+(1, 1, 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -251,7 +224,7 @@ ALTER TABLE `s_user_role`
 -- AUTO_INCREMENT для таблицы `s_basket`
 --
 ALTER TABLE `s_basket`
-  MODIFY `id_basket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_basket` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `s_categories`
@@ -263,7 +236,7 @@ ALTER TABLE `s_categories`
 -- AUTO_INCREMENT для таблицы `s_goods`
 --
 ALTER TABLE `s_goods`
-  MODIFY `id_good` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_good` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `s_order`
@@ -293,13 +266,13 @@ ALTER TABLE `s_role`
 -- AUTO_INCREMENT для таблицы `s_user`
 --
 ALTER TABLE `s_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `s_user_role`
 --
 ALTER TABLE `s_user_role`
-  MODIFY `id_user_role` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user_role` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
